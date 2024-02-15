@@ -1,0 +1,9 @@
+[submodule "dev-tasks-server"]
+	path = dev-tasks-server
+	url = https://github.com/luisfelix-93/dev-tasks-server.git
+[submodule "dev-login-server"]
+	path = dev-login-server
+	url = https://github.com/luisfelix-93/dev-login-server.git
+[submodule "dev-task-gateway"]
+	path = dev-task-gateway
+	url = https://github.com/luisfelix-93/dev-task-gateway.git

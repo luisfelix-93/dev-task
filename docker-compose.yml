@@ -1,0 +1,24 @@
+version: '3'
+services:
+  dev-task-gateway:
+    image: nginx:latest
+    container_name: dev-task-gateway
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./dev-task-gateway/nginx.config:/etc/nginx/nginx.config:ro
+    depends_on:
+      - dev-login-server
+      - dev-tasks-server
+
+  dev-login-server:
+    build: ./dev-login-server
+    container_name: dev-login-server
+    ports:
+      - "8080:8080"
+
+  dev-tasks-server:
+    build: ./dev-tasks-server
+    container_name: dev-tasks-server
+    ports:
+      - "5001:5001"
